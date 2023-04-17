@@ -6,7 +6,8 @@ const TAB_MENU = ['Color Flipper', 'Simple Hex'];
 
 header.style.width = '100%';
 header.style.height = '80px';
-header.style.border = '1px solid lightgreen';
+header.style.position = 'fixed';
+header.style.backgroundColor = '#ffffff';
 
 tabMenu.style.width = '100%';
 tabMenu.style.height = '100%';
@@ -61,3 +62,8 @@ for (let i = 0; i < tabs.length; i++) {
   const tab = tabs[i];
   tab.addEventListener('click', switchTab);
 }
+
+window.onload = () => {
+  const defaultTab = tabs[0] as HTMLLIElement;
+  defaultTab.style.color = 'blue';
+};
